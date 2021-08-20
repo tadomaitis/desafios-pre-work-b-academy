@@ -7,11 +7,9 @@ const john = {
 
 const jane = {
   ...john,
-  hobbies: [...john.hobbies]
+  name: 'Jane',
+  hobbies: john.hobbies.concat('MuayThai', 'Programming')
 }
-
-jane.name = 'Jane'
-jane.hobbies.push('MuayThai', 'Programming')
 
 console.log('John:', john)
 console.log('Jane:', jane)
