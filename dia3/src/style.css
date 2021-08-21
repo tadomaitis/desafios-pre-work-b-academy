@@ -6,3 +6,42 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+select {
+  width: 200px;
+  height: 100px;
+  line-height: 50px;
+}
+
+.coloredDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+  height: 100px;
+width: 100px;
+
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.purple {
+  background-color: purple;
+}
+
+
