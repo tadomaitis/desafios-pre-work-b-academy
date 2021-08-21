@@ -7,6 +7,32 @@
     <title>Dia 4</title>
   </head>
   <body>
+    <form class="cars-form" data-js="cars-form">
+      <label for="image-url">Image:</label>
+      <input data-js="image-url" id="image-url" type="text" required />
+      <label for="name">Marca/Modelo:</label>
+      <input data-js="name" id="name" type="text" required />
+      <label for="year">Ano: </label>
+      <input data-js="year" id="year" type="text" required />
+      <label for="plate">Placa: </label>
+      <input data-js="plate" id="plate" type="text" required />
+      <label for="color">Cor: </label>
+      <input data-js="color" id="color" type="text" required />
+      <button data-js="register-car" type="submit">Cadastrar veículo</button>
+    </form>
+
+    <table data-js="table">
+      <thead>
+        <tr>
+          <th>Imagem (URL)</th>
+          <th>Marca / Modelo</th>
+          <th>Ano</th>
+          <th>Placa</th>
+          <th>Cor</th>
+        </tr>
+      </thead>
+      <tbody data-js="tbody"></tbody>
+    </table>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

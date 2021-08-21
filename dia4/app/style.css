@@ -6,3 +6,21 @@ body {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.cars-form {
+  margin-top: 1em;
+}
+
+button {
+  margin-top: 1em;
+  padding: 0.5em;
+}
+
+table {
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+th {
+  border: 1px solid black;
+}
