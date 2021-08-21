@@ -1,5 +1,4 @@
 // Exercicio 1
-const body = document.querySelector('body')
 const form = document.querySelector('[data-js=form]')
 
 const nameInput = document.querySelector('[data-js=name]')
@@ -37,7 +36,8 @@ const createOptionOnSelect = (color) => {
 colors.forEach(color => createOptionOnSelect(color))
 
 const divsHolder = document.createElement('div')
-body.appendChild(divsHolder)
+divsHolder.classList.add('divsHolder')
+form.after(divsHolder)
 
 for (let i = 1; i <=5; i++) {
   const coloredDiv = document.createElement('div')

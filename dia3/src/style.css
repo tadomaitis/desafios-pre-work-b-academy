@@ -17,6 +17,12 @@ select {
   display: none;
 }
 
+.divsHolder {
+  margin: top 1em;
+  display: flex;
+  flex-direction: row;
+}
+
 .show {
   display: block;
   height: 100px;
@@ -43,4 +49,20 @@ select {
   background-color: purple;
 }
 
+.cars-form {
+  margin-top: 1em;
+}
+
+button {
+  margin-top: 1em;
+}
+
+table {
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+th {
+  border: 1px solid black;
+}
 
