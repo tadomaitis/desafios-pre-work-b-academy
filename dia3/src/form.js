@@ -1,5 +1,5 @@
 // Exercicio 1
-
+const body = document.querySelector('body')
 const form = document.querySelector('[data-js=form]')
 
 const nameInput = document.querySelector('[data-js=name]')
@@ -23,6 +23,7 @@ const handleTyping = (inputValue) => {
 
 const select = document.createElement('select')
 select.setAttribute('multiple', 'multiple')
+form.appendChild(select)
 
 const colors = ['blue', 'red', 'green', 'yellow', 'purple']
 
@@ -35,10 +36,7 @@ const createOptionOnSelect = (color) => {
 
 colors.forEach(color => createOptionOnSelect(color))
 
-form.appendChild(select)
-
 const divsHolder = document.createElement('div')
-const body = document.querySelector('body')
 body.appendChild(divsHolder)
 
 for (let i = 1; i <=5; i++) {
@@ -47,7 +45,6 @@ for (let i = 1; i <=5; i++) {
 }
 
 const coloredDiv = [...divsHolder.children]
-console.log(coloredDiv)
 
 select.addEventListener('change', (e) => {
   const divs = ([...e.target.options].map(el => ({
@@ -57,9 +54,9 @@ select.addEventListener('change', (e) => {
   divs.forEach(item => {
     if (item.selected) {
       coloredDiv[divs.indexOf(item)].classList.add('show',item.value)
-    } else {
-      coloredDiv[divs.indexOf(item)].classList.remove('show')
+      return
     }
+    coloredDiv[divs.indexOf(item)].classList.remove('show')
   })
   }
 )
