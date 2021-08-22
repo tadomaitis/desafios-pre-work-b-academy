@@ -33,7 +33,7 @@ const colors = ['blue', 'red', 'green', 'yellow', 'purple']
 const createOptionOnSelect = (color) => {
   const currentColor = document.createElement('option')
   currentColor.setAttribute('value', color)
-  currentColor.innerHTML = color
+  currentColor.textContent = color
   select.appendChild(currentColor)
 }
 
