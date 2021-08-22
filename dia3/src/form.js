@@ -2,10 +2,10 @@
 const form = document.querySelector('[data-js=form]')
 
 const nameInput = document.querySelector('[data-js=name]')
-nameInput.addEventListener('keyup', () => handleTyping(nameInput.value))
+nameInput.addEventListener('input', () => handleTyping(nameInput.value))
 
 const handleTyping = (inputValue) => {
-  const reservedWords = ['do', 'da', 'de', 'dos']
+  const reservedWords = ['do', 'da', 'de', 'dos', 'das']
   const words = inputValue.split(' ')
   const transformedWords = words.map(word => {
     if (word === '') return
