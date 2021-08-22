@@ -2,20 +2,24 @@
 const form = document.querySelector('[data-js=form]')
 
 const nameInput = document.querySelector('[data-js=name]')
+
 nameInput.addEventListener('input', () => handleTyping(nameInput.value))
 
+const reservedWords = ['do', 'da', 'de', 'dos', 'das']
+
 const handleTyping = (inputValue) => {
-  const reservedWords = ['do', 'da', 'de', 'dos', 'das']
   const words = inputValue.split(' ')
-  const transformedWords = words.map(word => {
-    if (word === '') return
-    if (reservedWords.includes(word.toLowerCase())) {
-      return word.toLowerCase()
-    } else {
-      return word[0].toUpperCase() + word.slice(1).toLowerCase()
-    }
-  })
-  nameInput.value = transformedWords.join(' ')
+
+    const transformedWords = words.map(word => {
+      return reservedWords.includes(word.toLowerCase())
+        ? word.toLowerCase()
+        : capitalize(word)
+      }).join(' ')
+  nameInput.value = transformedWords
+}
+
+function capitalize (word) {
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
 }
 
 // Exercicio 2
