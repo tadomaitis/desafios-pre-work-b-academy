@@ -26,7 +26,6 @@ function capitalize (word) {
 
 const select = document.createElement('select')
 select.setAttribute('multiple', 'multiple')
-form.appendChild(select)
 
 const colors = ['blue', 'red', 'green', 'yellow', 'purple']
 
@@ -65,3 +64,4 @@ select.addEventListener('change', (e) => {
   }
 )
 
+form.appendChild(select)
