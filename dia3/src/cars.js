@@ -1,6 +1,5 @@
 const carsForm = document.querySelector('[data-js="cars-form"]')
 const tableBody = document.querySelector('[data-js="tbody"]')
-const button = document.querySelector('[data-js="register-car"]')
 const imageInput = document.querySelector('[data-js="image-url"]')
 
 carsForm.addEventListener('submit', (e) => {
